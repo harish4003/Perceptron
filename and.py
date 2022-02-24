@@ -23,7 +23,7 @@ if __name__=="__main__":  # entry point
 
     df = pd.DataFrame(AND)
 
-    df
+    print(df)
 
 
     X,y = prepare_data(df)

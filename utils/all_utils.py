@@ -8,11 +8,19 @@ import os
 plt.style.use("fivethirtyeight") # THIS IS STYLE OF GRAPHS
 
 def prepare_data(df):
-  X = df.drop("y", axis=1)
+    """It is used to seperate labels
 
-  y = df["y"]
+    Args:
+        df (pd.DatFrame): a pandas daraframe
 
-  return X, y
+    Returns:
+        tuple: returns dependent and independent
+    """
+    X = df.drop("y", axis=1)
+
+    y = df["y"]
+
+    return X, y
 
 def save_model(model, filename):
   model_dir = "models"
